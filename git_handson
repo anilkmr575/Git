@@ -1,0 +1,52 @@
+Some Git commands
+
+To Enable permanent saving of password
+
+#git config --global credential.helper cache
+
+#git config --global user.name "Your Name" 
+
+#git config --global user.email you@example.com
+#also add with ssh password less
+#ssh-keygen #copy key and paste in github key record then run below cmd
+#ssh -T git@github.com
+
+create Repo commands
+
+#git init  #create local repo
+#git clone #Download or clone your repository form github
+
+Sync Rep commands
+---Set up remote origin repository or link central repo with central repo
+
+#git remote add origin <repo_url>  # to link remote repo
+#git remote -v #to check current remote origin 
+#git remote set-url origin <repo_url> #to change the remote origin repository
+
+After that perform git pull to first download all files of repository
+
+#git pull origin master
+
+After creating files and folder add them into index
+
+#git add .
+#git add <filename.txt> #add file to index
+#git add -A  # add all the file to index
+#git add folder/* #in case of adding directory
+Making Changes commands
+#git commit -m “any message want to pass”
+#git commint -a -m "message" # to commit all the files
+#git log  #to check all the commits
+
+And finally push the update changes to remote git repository
+#git push origin master
+---Parrellel Development Commands
+#git branch <branchname> #to create new branch
+#git checkout master #move form one branch to another
+#get merge <branchname> # merge all the changes to master branch
+#get rebase master #merge all the changes along with commit history to master
+
+------Revert back to previous version
+# git checkout <8bit-hexdecdigit> <filename>
+-------How to delete branch in github
+#git branch -d branch_name $git push origin --delete branch_name
