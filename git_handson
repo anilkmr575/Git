@@ -50,3 +50,17 @@ And finally push the update changes to remote git repository
 # git checkout <8bit-hexdecdigit> <filename>
 -------How to delete branch in github
 #git branch -d branch_name $git push origin --delete branch_name
+Clear Git local Cache.
+#git rm -r --cached . (–cached will only remove files from the index.)
+To see which files will be deleted.
+# git clean -n
+To remove/delete files.
+#git clean -f
+#To remove/clean  directory
+#git clean -fd
+To remove ignored files
+#git clean -fX
+To remove ignored and non-ignored files
+#git clean -fx
+
+
