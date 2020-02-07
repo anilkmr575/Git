@@ -1,4 +1,13 @@
-Some Git commands
+Version Control - The term Version control refers to a system that records changes to a file 
+or set of files over time called the ‘versions’.
+Git - Git is a version control software runs locally on a computer, 
+is completely self-sufficient, and it does not require the use of any external, cloud hosting service to function
+
+GitHub - GitHub is a Web-based Git version control repository hosting service. 
+It provides all of the distributed version control and source code management (SCM) functionalities of Git,
+while topping it with a few of its own features
+
+###Some Git commands
 
 To Enable permanent saving of password
 
