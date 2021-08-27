@@ -1,0 +1,124 @@
+Git configuration:--
+--to map git hub account in which we want to perform operations
+git config –global user.name <username>
+git config –global user.email <email>
+
+---to change git hub account configuration
+ 2144  sudo git config --global --unset user.name
+ 2144  sudo git config --global --unset user.email
+sudo git config --global --unset-all
+
+
+
+
+----to check mapped user name and email
+git config –global user.name
+git config –global user.email
+---to initialize git repo
+---go to the dir path,  which you want to use as repo.
+Git init
+--- to check the status of files in repo.
+Git status
+i) untracked:- not tracked by git e.g log and binary files i.e generated automaically.
+ii) unmodified-  staged and snapshot take by git
+iii) modified -  if chages made on file after staging it goes in modified.
+Staging -  git hub start recording the file i.e start taking the snapshots.
+---- to add file in staging area.
+Git  add <filename>
+--- to remove from staging area.
+Git rm –cached <filename>
+
+---to start recording or track editing we need inital commit.
+i)git commit
+ii) write commit message in file top. Show what change made on git.
+--- to add all unstracked file to staging area.
+Git add -A
+
+-- if file alreay in staging area and not commited but we make any chages in file.
+We again need to stage the file to madified file ready to staging area.
+
+--- to commit multipal files.
+Git commit -m “message to be printed!”
+--- to rollback changes of file
+git checkout <filename>
+--to rollback multipal files (to match working area as last commit).
+git checkout -f
+
+--- to check commit logs by user and data and time
+git log
+-- to check log of last five  commits 
+git log -p -5
+
+--- to compare staging and working area.
+Git diff (if both area have difference then it will show otherwise no output).
+
+-- to compare stating area with last commit
+git diff –staged
+
+--- to commit directly and add to staging area.
+Git commit -a -m “message(“skipped staging area”)”
+
+---to change git commit message
+sudo git commit --amend -m "new message"
+
+---to remove files form staging area.
+git reset HEAD -- path/to/file
+---to remove file from commit
+git rm  -- delet file form working and staging area.
+Git rm –cached <filename> delet file from the stating area.
+--to delete multipal files form staging area after commit.
+git rm --cached -r .
+After git rm run git add & commet comand it clear the status 
+and then run git log command to check all changes.
+-- to check summerised status
+git status -s
+--to ignore file for tracking
+i) create .gitignore
+ii) and add the name of the files inside the .gitignore file that we want to ingore.
+---to ignore particular file
+add / in filename inside .gitignore file. 
+I will ignore the file form the path where .gitingore will present.
+Ignore/ --- to ignore other folder of tree.
+
+--------------------------Git Branching------------------------------------------------------
+branching :- is the process of making copy of master branch.
+-- to list all the branchs of git hub
+git branch
+-- to create new branch
+git branch <branchname>
+--- to switch to other branch
+git checkout <brnachname>
+-- to come out form secondary to master branch
+git checkout master
+---to merge slave branch with master branch
+1) git checkout master ( first come back to master branch)
+git merge feature1
+to cross check run git log command it show all the comments used to make changes.
+---to make new branch and switch to that branch with one command
+git checkout -b flaskintegration
+
+-- add remote git repository to physical system.
+git remote add origin <https://repourl>
+--- to list remote repositry in system.
+Git remote
+--- to check fetch and push url
+git remote -v
+--- to change git url
+---to clear remote repot
+git remote remove <remote name: alias name>
+git remote set-url origin <new url>
+--to push to remote repo
+git push -u origin master
+--to push slave branch to remote
+i) first chekout to slave barch then run
+ii) git push -u origin <otherbranch>
+
+iii) git push( automatically push to lastly pushed branch)
+
+
+----git clone----- to pull the remote repository to phsyical dir.
+git clone <repourl> <dirname where to want clone>
+
+--hard WILL DELETE YOUR WORKING DIRECTORY CHANGES. Be sure to stash any local changes you want to keep before running this command.
+--git reset --hard HEAD~1
+The HEAD~1 means the commit before head(last commit in branch).
